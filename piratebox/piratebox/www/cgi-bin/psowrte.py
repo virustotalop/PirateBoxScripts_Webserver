@@ -23,6 +23,13 @@ else:
 color = values["color"].value
 curdate = datetime.datetime.now()
 
+if color.lower() == "admin":
+  color = "def"
+adminpass = "-mysecretpassword"
+if name.endswith(adminpass):
+  name = name[0:-1*len(adminpass)]
+  color = "admin"
+
 process_form(rawname, rawdata, color)
 
 print """<html><body>ok</body></html>"""
