@@ -26,8 +26,8 @@ curdate = datetime.datetime.now()
 if color.lower() == "admin":
   color = "def"
 adminpass = "-mysecretpassword"
-if name.endswith(adminpass):
-  name = name[0:-1*len(adminpass)]
+if rawname.endswith(adminpass):
+  rawname = rawname[0:-1*len(adminpass)]
   color = "admin"
 
 process_form(rawname, rawdata, color)
